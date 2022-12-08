@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>MOKEPON!</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <div id="h1-container">
+            <h1>MOKEPON!</h1>
+        </div>
+
+        <section id="seleccionar-mascota">
+            <h2 class="subtitulo">Elige tu mascota: </h2>
+
+            <form action="" class="mascotas-container" id="contenedor-tarjetas">
+                
+            </form>
+
+            <button id="boton-mascota" class="type-button">Seleccionar</button>
+        </section>
+
+        <section id="section-mapa">
+            <h2 class="subtitulo">Recorre el mapa con tu mokepon</h2>
+            <canvas id="mapa"></canvas>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()">🔼</button>
+            <div>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">◀️</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">🔽</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">▶️</button>
+            </div>                
+            </section>
+
+        <section id="seleccionar-ataques">
+            <h2 class="subtitulo">Elige tu ataque:</h2>
+
+            <div class="ataques-container" id="contenedor-ataques">
+                
+            </div>
+        
+            <div id="resultados">
+                <p id="resultado">Mucha suerte!!!</p>
+                <p id="resultado-final">...</p>
+                
+                <section id="reiniciar">
+                        <button id="boton-reiniciar" class="type-button">Reiniciar</button>
+                </section>
+            </div>
+
+            <div class="ataques"> 
+                <div class="tarjeta-ataques" id="tarjeta1">
+                    <p id="vidas-jugador">0</p>
+                    <p id="mascota-jugador"></p>
+                    <div id="ataques-jugador"></div>
+                </div>
+                <div class="tarjeta-ataques">
+                    <p id="vidas-enemigo">0</p>
+                    <p id="mascota-enemigo"></p>
+                    <div id="ataques-enemigo"></div>
+                </div>
+            </div> 
+        </section>
+        <script src="./js/mokepon.js"></script>
+    </body>
+</html>
